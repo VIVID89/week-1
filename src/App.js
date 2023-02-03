@@ -1,29 +1,13 @@
 import React from 'react';
 
-function App() {
-    // <---- 자바스크립트 영역 ---->
-    // function onClickButtonHandler () {
-    //   return alert("클릭!");
-    // }
-    const onClickButtonHandler = () => alert("클릭!");
-      
-    
+//자녀 컴포넌트
+function Child() { //컴포넌트 이름은 대문자로 시작한다.
+  return <div>나는 아들입니다.</div>;
+}
 
-    return (
-        /* <---- HTML/JSX 영역  ---->*/
-        <div
-            style={{   //jsx style 속성에 객체 형식으로 집어넣는다. 
-                height: '100vh',  
-                display: ' flex',
-                flexDirection: 'column',
-                justifyContent: 'center',
-                alignItems: 'center',
-            }}
-        >
-            <span>이것은 내가 만든 App컴포넌트 입니다.</span>
-            <button onClick={onClickButtonHandler}>클릭!</button>
-        </div>
-    );
+// 부모 컴포넌트
+function App() {
+  return <Child />;    
 }
 
 export default App;
