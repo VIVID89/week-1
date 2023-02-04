@@ -1,15 +1,22 @@
-import React, { Children } from 'react'
-import Child from 'Child';
-
+import React, { useState } from 'react';
+import './App.css';
 
 function App() {
-  const name ="test";
+   const [name, setName] = useState('김할아버지');
 
-  return (
-    <Child age={21} name={name}>
-    이름
-    </Child>
-  ) 
+    return (
+        <div>
+            {name}
+            <br />
+            <button
+            onClick={ function () {
+              setName("박할아버지");
+            }}
+            >
+            클릭
+            </button>
+        </div>
+    );
 }
 
-export default App
+export default App;
